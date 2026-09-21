@@ -115,7 +115,7 @@ int benefitInput = int.Parse(Console.ReadLine());
 bool hasBenefit = (benefitInput == 1);
 bool hasGoodCertificate = averageGrade >= 4.0;
 bool hasGoodExam = examScore >= 60;
-bool iseligibleByRules = (hasGoodCertificate && hasGoodExam) || hasBenefit;
+bool isEligibleByRules = (hasGoodCertificate && hasGoodExam) || hasBenefit;
 double totalScore = averageGrade * 10; 
 totalScore += examScore;
 
@@ -124,7 +124,17 @@ Console.WriteLine("Результат");
 Console.WriteLine($"Хороший аттестат (>= 4.0): {hasGoodCertificate}");
 Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
 Console.WriteLine($"Льгота: {hasBenefit}");
-Console.WriteLine($"Проходит по правилам: {iseligibleByRules}");
+Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
 Console.WriteLine($"Итоговый балл: {totalScore}");
+
+Console.WriteLine("Чётное или нечётное—без if");
+Console.WriteLine("Введите целое число");
+string text1 = Console.ReadLine();
+int number1 = int.Parse(text1);
+bool isEven = number1 % 2 == 0;
+Console.WriteLine($"Число чётное: {isEven}");
+
+Console.WriteLine("Инкремент в выражении");
+
 
 
