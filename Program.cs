@@ -167,3 +167,6 @@ Console.WriteLine($"Сумма >= 3000: {isSum}");
 Console.WriteLine($"Товаров в чеке >= 3: {isItem}");
 Console.WriteLine($"Есть ли карта постоянного покупателя: {card2}");
 Console.WriteLine($"Положена ли скидка: {eligibleForDiscount}");
+
+int primer = 10 - 2 * 3 + 4 / 2;
+Console.WriteLine($"{primer}");
