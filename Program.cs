@@ -139,7 +139,7 @@ Console.WriteLine("Инкремент в выражении");
 int x1 = 3;
 Console.WriteLine($"x1++ = {x1++}");
 Console.WriteLine($"После этого x1 = {x1}");
-// x1++ сначала возращает старое значение (3) для вывода, а затем увеличивает от x1 до 4
+// x1++ сначала возвращает старое значение (3) для вывода, а затем увеличивает от x1 до 4
 
 int x2 = 3;
 int result = ++x2 * 10;
@@ -151,4 +151,19 @@ int res = x3++ * 10;
 Console.WriteLine($"x3++ * 10 = {res}");
 // x3++ использует старое значение (3) для умножения, а сам x3 становится 4 уже после этого
 
+Console.WriteLine("Калькулятор скидки с несколькими условиями");
+Console.Write("Введите сумму покупки: ");
+int sum = int.Parse(Console.ReadLine());
+Console.Write("Есть ли карта постоянного покупателя? (1 - да, 0 -нет): ");
+int card1 = int.Parse(Console.ReadLine());
+bool card2 = (card1 == 1);
+Console.Write("Введите количество товаров в чеке: ");
+int item = int.Parse(Console.ReadLine());
+bool isSum = sum >= 3000;
+bool isItem = item >= 3;
+bool eligibleForDiscount = (isSum && isItem) || card2;
 
+Console.WriteLine($"Сумма >= 3000: {isSum}");
+Console.WriteLine($"Товаров в чеке >= 3: {isItem}");
+Console.WriteLine($"Есть ли карта постоянного покупателя: {card2}");
+Console.WriteLine($"Положена ли скидка: {eligibleForDiscount}");
